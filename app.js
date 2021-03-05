@@ -75,11 +75,12 @@ function createCard(entry) {
     card_ul.className = "list-group list-group-flush";
 
     // card header
-    let header = document.createElement('button');
-    header.className = 'map_button';
-    header.type = 'button';
-    header.innerText = 'View on Map';
-    card_ul.appendChild(header);
+    // let header = document.createElement('button');
+    // header.className = 'map_button';
+    // header.id = 'display_map_button';
+    // header.type = 'button';
+    // header.innerText = 'View on Map';
+    // card_ul.appendChild(header);
     
     // li elements
     let li_community = document.createElement('li');
@@ -255,20 +256,20 @@ fetch(url)
 
 // Data:
 
-// let map_button = document.querySelector("#map_button");
+// let map_button = document.getElementById("#display_map_button");
 
 // map_button.addEventListener("click", (event) => {
 //     console.log("Map Displayed in Map Tab");
 // })
 
 // Map:
-// let map;
+let map;
 
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 8,
-//   });
-// }
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 41.8781, lng: -87.6298 },
+    zoom: 8,
+  });
+}
 
 // initMap();

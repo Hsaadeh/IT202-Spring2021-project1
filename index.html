@@ -9,8 +9,7 @@
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <script src="app.js" async></script>
-  <style>
+    <style>
     .screen {
       display: none;
     }
@@ -27,6 +26,10 @@
     h {
       font-weight: bold;
       font-size: x-large;
+    }
+
+    #map {
+      height: 500px;
     }
 
 
@@ -51,68 +54,70 @@
       <a class="nav-link" data-screen="About">About</a>
     </li>
   </ul>
-
+  
   <div id="screen_content">
     <div class="screen" id="Home-Instructions">
       <h>Instructions:</h>
-
+      
       <p>- Home/Insructions: the page you are currently viewing is the instruction page. </p>
       <p>- From: the form page is where you filter data. </p>
       <p>- Data: the data page is where you can see all the data that matched your filter request. </p>
       <p>- Map: the map page shows you the property you picked on the map. </p>
       <p>- About: the about page gives information about the site and developer of the site. </p>
-
+      
     </div>
-
+    
     <div class="screen" id="Form">
-
+      
       <label for="dropdown_community_options">Filter by Community:</label>
       <select id="dropdown_community_options" name="dropdown_community_options"></select>
       <button id="filter_search_community" type="button">Filter</button>
-
+      
       <form id="zip_code">
         <label for="filter">Zip Code:</label>
         <input type="text" id="zip_code_filter" name="filter">
         <button id="filter_search_zip_code" type="button">Filter</button>
       </form>
-
+      
       <form id="id">
         <label for="filter">ID:</label>
         <input type="text" id="id_filter" name="filter">
         <button id="filter_search_id" type="button">Filter</button>
       </form>
-
+      
       <form id="pin">
         <label for="filter">PIN:</label>
         <input type="text" id="pin_filter" name="filter">
         <button id="filter_search_pin" type="button">Filter</button>
       </form>
-
+      
     </div>
-
+    
     <div class="screen" id="Data">
-
+      
     </div>
-
+    
     <div class="screen" id="Map">
       PLACE HOLDER FOR : MAP
-
-      <!-- <div id="map"></div> -->
+      
+      <div id="map"></div>
     </div>
-
+    
     <div class="screen" id="About">
       <p>App was made by: Hadi Saadeh</p>
       <p>This is a single page 5 screen SPA that was made for my Web Multimedia Course</p>
-
+      
     </div>
-
+    
   </div>
-
-
-  <!-- <script
+  
+  <script src="app.js"></script>
+  
+  
+  <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqmxNMC23J5khMF2JOuRDcxZylUhMw7iY&callback=initMap"
     async>
-    </script> -->
+  </script>
 </body>
 
 </html>
